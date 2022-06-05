@@ -71,6 +71,7 @@ describe("Test Suite", function () {
         cy.get('div.container.body-content > p > a').click() //Assert
     })
 
+<<<<<<< HEAD
     // Test Case :5 (Doesnt work, for some reason it goes to about page)
     // Verify KnownIssues/Limitations loads up
     // 1)Application is loaded - Arrange
@@ -80,6 +81,12 @@ describe("Test Suite", function () {
         cy.visit('https://www.findmovieforme.com/'); //Arrange
         cy.get(':nth-child(2) > p > a').click(); //Act
         cy.contains('Known limitations for the system', { setTimeout: 6000 }); //Assert
+=======
+
+    it("Verify KnownIssues/Limitations loads up", () => {
+        cy.visit('https://www.findmovieforme.com/');
+        cy.contains('Known Issues/Limitations').click();
+>>>>>>> 051eedb73e0ba95b9906236aa1d874c37b1d08ed
     })
 
     it("Verify Image", () => {
